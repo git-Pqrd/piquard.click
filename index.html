@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>François Piquard | Home</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.0.1/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <meta
+      name="description"
+      content="François Piquard - Technical Solutions Manager at Google, experienced in leading high-impact tech projects."
+    />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-XD0NVQY588"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-XD0NVQY588");
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const numParticles = 10;
+        const particles = [];
+        const colors = ["#334455", "#446677", "#558899", "#66aabb", "#77bbcc"]; // Array of dark colors
+
+        for (let i = 0; i < numParticles; i++) {
+          const particle = document.createElement("div");
+          particle.style.position = "absolute";
+          particle.style.borderRadius = "50%";
+          particle.style.width = "20px";
+          particle.style.height = "20px";
+          particle.style.background = colors[i % colors.length]; // Cycle through the colors array
+          particle.style.pointerEvents = "none";
+          document.body.appendChild(particle);
+          particles.push(particle);
+        }
+
+        document.addEventListener("mousemove", (e) => {
+          let x = e.pageX;
+          let y = e.pageY;
+
+          particles.forEach((particle, index) => {
+            setTimeout(() => {
+              particle.style.left = x + "px";
+              particle.style.top = y + "px";
+              particle.style.opacity = (numParticles - index) / numParticles; // Fades as it gets older
+              particle.style.transform = `scale(${
+                (numParticles - index) / numParticles
+              })`; // Shrinks as it gets older
+            }, index * 50); // Delay increases with index
+          });
+        });
+      });
+    </script>
+    <!-- gradient from https://manuel.pinto.dev -->
+    <style>
+      * {
+        cursor: none; /* Hides the default cursor */
+      }
+
+      body {
+        background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+      }
+
+      @keyframes gradient {
+        0% {
+          background-position: 0% 50%;
+        }
+        50% {
+          background-position: 100% 50%;
+        }
+        100% {
+          background-position: 0% 50%;
+        }
+      }
+    </style>
+  </head>
+  <body class="px-2 md:px-6 lg:px-12 text-gray-50 text-left">
+    <div class="container w-full px-4">
+      <header class="py-12">
+        <h1 class="text-5xl font-bold">François Piquard</h1>
+        <p class="text-xl mt-4">
+          <span
+            >Currently:<b class="ml-2">Software Engineer in London for</b></span
+          >
+          <img
+            alt="Google"
+            class="h-8 inline-block bg-white p-1 pt-2 rounded"
+            src="./Google_2015_logo.svg.png"
+            alt="Google Logo"
+          />
+        </p>
+        <p class="text-xl">
+          <span
+            >Previously:<b class="ml-2"
+              >Technical Solution Manager, Project Leader, even Sales</b
+            ></span
+          >
+        </p>
+      </header>
+
+      <section class="my-8">
+        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+        <p class="text-lg max-w-8xl">
+          Passionate about leveraging technology to solve real-world problems.
+          <br />
+          Strong SWE skills with Machine-learning, PM and Cloud certifications
+          <br />
+          Experienced in managing and leading tech projects across multiple
+          sectors. Skilled in Python, Typescript, and cloud technologies.
+        </p>
+      </section>
+
+      <section class="my-8">
+        <h2 class="text-3xl font-bold mb-6">Projects</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <a
+            href="https://seo-metrics.net"
+            target="_blank"
+            class="hover:-translate-y-2 transform transition-all bg-blue-50 rounded-lg p-6 text-black w-full"
+          >
+            <h3 class="text-2xl font-bold flex">
+              SEO-Metrics <img class="ml-2 h-4" src="./link.svg" />
+            </h3>
+            <p>
+              A SaaS platform for monitoring SEO and website health, utilizing
+              Google's Lighthouse SDK for performance insights.
+            </p>
+          </a>
+          <a
+            href="https://learnpython.today"
+            target="_blank"
+            class="hover:-translate-y-2 transform transition-all bg-green-50 rounded-lg p-6 text-black w-full"
+          >
+            <h3 class="text-2xl font-bold">LearnPython.Today</h3>
+            <p>
+              NextJs web-app that aims to help people learn python in a fun and
+              engaging way. You can find the code to the repo in this
+            </p>
+          </a>
+          <div class="bg-yellow-50 rounded-lg p-6 text-black w-full">
+            <h3 class="text-2xl font-bold">Google INTERNAL</h3>
+            <p>
+              Created multiple Fullstack (Python/Typescript - Java/Dart)
+              solutions inside Google
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="my-8">
+        <h2 class="text-xl font-semibold mb-4">Connect with me:</h2>
+        <a
+          href="https://linkedin.com/in/piquard"
+          target="_blank"
+          class="text-blue-300 hover:text-white"
+          >LinkedIn</a
+        >
+        |
+        <a
+          href="https://github.com/git-PQRD"
+          target="_blank"
+          class="text-blue-300 hover:text-white"
+          >GitHub</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>
